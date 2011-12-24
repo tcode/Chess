@@ -22,6 +22,9 @@ def main():
 
         However there can be a certain pitfall in this as it might burn a lot of memory.
         """
+        # This was written in 25 minutes about, and now it is about time for a little break to figure
+        # out how the rest of my code should be structured to fit in with my overall scheme....
+
 
 
 
