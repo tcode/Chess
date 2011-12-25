@@ -19,13 +19,17 @@ def main():
         #sqaure.
 
         """
-        I would forinstance think that a board of 8x8 or 12x12 several times could be advantageus since then you have
-        to only write a lot less in terms of algorithms for figuring out where exactly the different pieces are
+        I would forinstance think that a board of 8x8 or 12x12 
+        several times could be advantageus since then you have
+        to only write a lot less in terms of algorithms for figuring out 
+        where exactly the different pieces are
 
         However there can be a certain pitfall in this as it might burn a lot of memory.
         """
-        # This was written in 25 minutes about, and now it is about time for a little break to figure
-        # out how the rest of my code should be structured to fit in with my overall scheme....
+        # This was written in 25 minutes about, 
+        #and now it is about time for a little break to figure
+        # out how the rest of my code should be structured to 
+        #fit in with my overall scheme....
 
 
 
