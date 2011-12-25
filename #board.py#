@@ -26,7 +26,10 @@ def make_row(num, row_num):
         count=count+1
     return row
 
-
+def edit_board(start, end, board):
+    
+            
+    return board
 
     
 make_board(8)
