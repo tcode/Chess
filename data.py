@@ -8,10 +8,15 @@
 
 def main():
         fi = raw_input('please enter your desired file> ')
-        f = open(fi, 'r') 
-        data = f.read()
-        print data
+        f = open(fi, 'r')
 
+        #print data
+        #input should be in the form 1.e2-e4 e7-e5 2.Ng1-f3 Nb8-c6
+        curinput = f.readline()
+        print curinput[2:4],
+        print "->",
+        print curinput[5:7]
+        
         #to have a reprensentation of the moves you got to have a way to 
         #structure the board in memory.
         #and while you do that, you might as well do bitboards 
@@ -20,7 +25,7 @@ def main():
 
         """
         I would forinstance think that a board of 8x8 or 12x12 
-        several times could be advantageus since then you have
+        several times could be advantageus since then yo        
         to only write a lot less in terms of algorithms for figuring out 
         where exactly the different pieces are
 
