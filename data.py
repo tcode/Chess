@@ -12,8 +12,10 @@ def main():
         data = f.read()
         print data
 
-        #to have a reprensentation of the moves you got to have a way to structure the board in memory.
-        #and while you do that, you might as well do bitboards that identifies wether a certain piece is at a certain 
+        #to have a reprensentation of the moves you got to have a way to 
+        #structure the board in memory.
+        #and while you do that, you might as well do bitboards 
+        #that identifies wether a certain piece is at a certain 
         #sqaure.
 
         """
