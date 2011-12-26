@@ -15,6 +15,7 @@ def make_board(quad_size):
     while count < quad_size:
         count=count+1
         board[count] = make_row(quad_size, count)
+    set_pieces(board)
     print_board(board)
     
 
@@ -22,167 +23,25 @@ def make_row(num, row_num):
     count = 0
     row = []
     while count < num:
-        row.append(0)
+        row.append('--')
         count=count+1
     return row
 
-def edit_board(start, end, board):
-    if start[1:] == 1:
-        tmplist = board[1]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-                        
-
-    if start[1:] == 2:
-        tmplist = board[2]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
 
 
-    if start[1:] == 3:
-        tmplist = board[3]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    if start[1:] == 4:
-        tmplist = board[4]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    if start[1:] == 5:
-        tmplist = board[5]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    if start[1:] == 6:
-        tmplist = board[6]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    if start[1:] == 7:
-        tmplist = board[7]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    if start[1:] == 8:
-        tmplist = board[8]
-        if start[:1] == 'a':
-            tmplist[0] = None
-        if start[:1] == 'b':
-            tmplist[0] = None
-        if start[:1] == 'c':
-            tmplist[0] = None        
-        if start[:1] == 'd':
-            tmplist[0] = None
-        if start[:1] == 'e':
-            tmplist[0] = None
-        if start[:1] == 'f':
-            tmplist[0] = None
-        if start[:1] == 'g':
-            tmplist[0] = None
-        if start[:1] == 'h':
-            tmplist[0] = None
-
-    return board
-
+def set_pieces(board):
+    count = 0
+    while count < 8:
+        count=count+1
+        if count == 1:
+            board[count] = ['WR', 'WN', 'WB', 'WQ', 'WK', 'WB', 'WN', 'WR']
+        if count == 2:
+            board[count] = ['WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP']
+        if count == 7:
+            board[count] = ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP']
+        if count == 8:
+            board[count] = ['BR', 'BN', 'BB', 'BQ', 'BK', 'BB', 'BN', 'BR']
+            
     
 make_board(8)
 
