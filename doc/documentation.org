@@ -1,0 +1,13 @@
+
+* Documentation for ChessPath
+** Board Documentation
+*** Implementation and ideas for the board
+    - The board implementation I have chosen is a bit overpowered for
+      a database only project.
+    - which might make the whole thing a little weird at the start,
+      also there is no graphics (which might be nice to implement
+      later
+      
+
+* Ideas for usage of ChessPath
+** 
