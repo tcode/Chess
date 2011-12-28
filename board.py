@@ -16,8 +16,8 @@ def make_board(quad_size):
         count=count+1
         board[count] = make_row(quad_size, count)
     set_pieces(board)
-    print_board(board)
-    
+    return board
+
 
 def make_row(num, row_num):
     count = 0
@@ -42,10 +42,21 @@ def set_pieces(board):
         if count == 8:
             board[count] = ['BR', 'BN', 'BB', 'BQ', 'BK', 'BB', 'BN', 'BR']
             
-    
-make_board(8)
+def edit_board():
+    return 0
+
+#Could I get some advantage by using classes here ? There might not be that much of a different, if I am going to access the 
+# Content from this file in another script, all of this is just the board implementation.
+# Then should I include the edit_board function here or save that for the interface.py script ?
 
 
+#All my relations should be put somewhere, without the need to call an extra function.
+#The relations should be as the pieces move, so that f3 points to all squares in line f 
+#and on the 3rd row, and knight jumps and all on the diagonals. (However when something 
+# stands in the way it should stop to relate, but that is an inprogram problem).
+
+nboard = make_board(8)
+print_board(nboard)
 
 
 
