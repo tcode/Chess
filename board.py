@@ -67,22 +67,57 @@ def bishop_move(board):
     # Now for some evaluation of this information to retrieve where the pieces are.
     current_row = board[row]
     #The nasty part here is that I want to check for both the text and number representation
+    if row == 1:
+        board_1_row = True
+        # this should be good.
+        # But then again 
+    elif row == 8:
+        board_8_row = True
+
     if str(line) == 'a' or int(line) == 1:
         print current_row[1]
+        board_a_line = True 
+        # So now I want to make a diagonal search feature..
+        # So now I need to retrieve information from board.
+        if board_1_row:
+            next_row = board[row+1]
+            new_square = next_row[1+1]
+            if new_sqaure == '--':
+                cont = True
+                another_row=board[next_row+1]
+                
+            else:
+                cont = False
+            
+        #Perhaps the code above is a bit to crude ?
+        #What can I do to lessen the if statements.
+        else:
+            if row == 2:
+                next_row = board[row+1]
     if str(line) == 'b' or int(line) == 2:
-         print current_row[2]
+        print current_row[2]
+        board_b_line = True
     if str(line) == 'c' or int(line) == 3:
         print current_row[3]
+        board_c_line = True
+        
     if str(line) == 'd' or int(line) == 4:
         print current_row[4] 
+        board_d_line = True
     if str(line) == 'e' or int(line) == 5:
         print current_row[5]
+        board_e_line = True
     if str(line) == 'f' or int(line) == 6:
         print current_row[6]
+        board_f_line = True
     if str(line) == 'g' or int(line) == 7:
         print current_row[7]
+        board_g_line = True
     if str(line) == 'h' or int(line) == 8:
         print current_row[8]
+        board_h_line = True
 #The above is great there is a minimal of if statements so it is not so cluttered.
-#However I have not began to define any movement yet, but I am to tired to do it now.
+#However I have not began to define any movement yet, but I am to tired to   
+
+# do   it now.
 
