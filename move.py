@@ -37,7 +37,11 @@ def move(srow, sline, erow, eline):
 # automatically generating appropriate data from part to part, it can still work with human 
 # interaction. That could be an important part of the program later.
 #move(3-10, 0-7, 3-10, 0-7)
-move(9, 4, 7, 4)
+
+
+#move(9, 4, 7, 4) # <- This actually works the 4 numbers are just becourse it is a internal function
+# Not meant to be directly exposed to the user, then I would have done it a little nicer, but internally
+# This seems a little easier to work with.
 
 print_board(board)
 
