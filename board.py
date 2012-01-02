@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 
+# Copyright Tobias Lindgaard [2012] part of ChessPath
+# Distributed under the terms of the GNU GPL
+# For information about the GPL see LICENSE in the root.
+
 
 
 def print_board(board):
     count = 0
-    lines = 8
+    lines = 10
     while count < lines:
         count=count+1
         print board[count]
@@ -32,15 +36,19 @@ def make_row(num, row_num):
 
 def set_pieces(board):
     count = 0
-    while count < 8:
+    while count < 10:
         count=count+1
         if count == 1:
-            board[count] = ['WR', 'WN', 'WB', 'WQ', 'WK', 'WB', 'WN', 'WR']
+            board[count] = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG', 'HH']
         if count == 2:
+            board[count] = ['==', '==', '==', '==', '==', '==', '==', '==']
+        if count == 3:
+            board[count] = ['WR', 'WN', 'WB', 'WQ', 'WK', 'WB', 'WN', 'WR']
+        if count == 4:
             board[count] = ['WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP']
-        if count == 7:
+        if count == 9:
             board[count] = ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP']
-        if count == 8:
+        if count == 10:
             board[count] = ['BR', 'BN', 'BB', 'BQ', 'BK', 'BB', 'BN', 'BR']
             
 def edit_board():
