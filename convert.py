@@ -21,6 +21,9 @@ def extract_info(fi):
     black = re.search(r'.Black.+', cont)
     result = re.search(r'.Result.+', cont)
     moves = re.search(r'1\.\s.+(1|0|1/2)', cont)
+    return moves.group()
+
+extract_info('game.pgn')
 
 
 
